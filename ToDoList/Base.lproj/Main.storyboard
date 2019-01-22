@@ -45,7 +45,7 @@
                     <navigationItem key="navigationItem" id="kNd-m0-802">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WlS-4a-z9c">
                             <connections>
-                                <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="Gsd-p6-bEE"/>
+                                <segue destination="2BP-tl-zXH" kind="show" id="cJG-jN-9bZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -57,6 +57,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="26.53673163418291"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CJi-By-dpr">
+            <objects>
+                <viewController id="2BP-tl-zXH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qKB-v4-FdV">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Zgn-3H-dK6"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBg-ZV-5cf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159" y="-785"/>
         </scene>
         <!--Detailed View Controller-->
         <scene sceneID="INx-oH-Pdc">

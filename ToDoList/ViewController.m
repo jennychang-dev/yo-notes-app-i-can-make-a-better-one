@@ -45,14 +45,11 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"passInMoreDetail" sender:indexPath];
-
 }
 
 // passing in the sender to show more details
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"preparing for segue");
-    
     DetailedViewController *dVC = segue.destinationViewController;
     
     if ([sender isKindOfClass:[NSIndexPath class]]) {
@@ -64,17 +61,6 @@
         dVC.date = item.completeDate;
         dVC.level = item.priorityLevel;
     }
-    
-    
-}
-
-
-- (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
-    NSLog(@"tapped");
-
-    // implement a text field for the user to add new activity
-    
-    
 }
 
 
