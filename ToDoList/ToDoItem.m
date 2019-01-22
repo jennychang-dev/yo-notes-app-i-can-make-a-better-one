@@ -6,15 +6,22 @@
 //  Copyright © 2019 Jenny Chang. All rights reserved.
 //
 
-#import "ToDoList.h"
+#import "ToDoItem.h"
 
-@implementation ToDoList
+@implementation ToDoItem
 
 - (instancetype)initWithActivity:(NSString*)activity
+                   andCompleteBy:(NSString*)completeDate
+                andPriorityLevel:(NSInteger)priorityLevel;
 {
     self = [super init];
+    
     if (self) {
+        
         self.activity = activity;
+        self.completeDate = completeDate;
+        self.priorityLevel = priorityLevel;
+        
     }
     return self;
 }
