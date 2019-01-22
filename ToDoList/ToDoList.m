@@ -10,4 +10,14 @@
 
 @implementation ToDoList
 
+- (instancetype)initWithActivity:(NSString*)activity
+{
+    self = [super init];
+    if (self) {
+        self.activity = activity;
+    }
+    return self;
+}
+
+
 @end

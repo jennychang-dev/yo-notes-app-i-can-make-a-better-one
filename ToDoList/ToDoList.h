@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ToDoList : NSObject
 
+@property (nonatomic) NSString *activity;
+
+-(instancetype)initWithActivity:(NSString*)activity;
+
 @end
 
 NS_ASSUME_NONNULL_END

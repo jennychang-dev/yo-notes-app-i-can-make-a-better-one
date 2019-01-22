@@ -15,6 +15,7 @@
 		B23BEA8B21F79C840020AC1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BEA8A21F79C840020AC1E /* main.m */; };
 		B23BEA9521F79C840020AC1E /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BEA9421F79C840020AC1E /* ToDoListTests.m */; };
 		B23BEAA021F79C840020AC1E /* ToDoListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BEA9F21F79C840020AC1E /* ToDoListUITests.m */; };
+		B23BEAAF21F79E040020AC1E /* ToDoList.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BEAAE21F79E040020AC1E /* ToDoList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		B23BEA9B21F79C840020AC1E /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23BEA9F21F79C840020AC1E /* ToDoListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListUITests.m; sourceTree = "<group>"; };
 		B23BEAA121F79C840020AC1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B23BEAAD21F79E040020AC1E /* ToDoList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoList.h; sourceTree = "<group>"; };
+		B23BEAAE21F79E040020AC1E /* ToDoList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				B23BEA7C21F79C830020AC1E /* AppDelegate.m */,
 				B23BEA7E21F79C830020AC1E /* ViewController.h */,
 				B23BEA7F21F79C830020AC1E /* ViewController.m */,
+				B23BEAAD21F79E040020AC1E /* ToDoList.h */,
+				B23BEAAE21F79E040020AC1E /* ToDoList.m */,
 				B23BEA8121F79C830020AC1E /* Main.storyboard */,
 				B23BEA8421F79C840020AC1E /* Assets.xcassets */,
 				B23BEA8621F79C840020AC1E /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 				B23BEA8021F79C830020AC1E /* ViewController.m in Sources */,
 				B23BEA8B21F79C840020AC1E /* main.m in Sources */,
 				B23BEA7D21F79C830020AC1E /* AppDelegate.m in Sources */,
+				B23BEAAF21F79E040020AC1E /* ToDoList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
