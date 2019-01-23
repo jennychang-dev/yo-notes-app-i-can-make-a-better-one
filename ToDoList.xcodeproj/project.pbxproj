@@ -17,6 +17,7 @@
 		B23BEAA021F79C840020AC1E /* ToDoListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BEA9F21F79C840020AC1E /* ToDoListUITests.m */; };
 		B23BEAAF21F79E040020AC1E /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BEAAE21F79E040020AC1E /* ToDoItem.m */; };
 		B23BEAB221F7AA8C0020AC1E /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BEAB121F7AA8C0020AC1E /* DetailedViewController.m */; };
+		B23BEAB521F7CBCE0020AC1E /* AddNewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BEAB421F7CBCE0020AC1E /* AddNewItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		B23BEAAE21F79E040020AC1E /* ToDoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 		B23BEAB021F7AA8C0020AC1E /* DetailedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
 		B23BEAB121F7AA8C0020AC1E /* DetailedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
+		B23BEAB321F7CBCE0020AC1E /* AddNewItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewItemViewController.h; sourceTree = "<group>"; };
+		B23BEAB421F7CBCE0020AC1E /* AddNewItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				B23BEAAD21F79E040020AC1E /* ToDoItem.h */,
 				B23BEAAE21F79E040020AC1E /* ToDoItem.m */,
 				B23BEA8121F79C830020AC1E /* Main.storyboard */,
+				B23BEAB321F7CBCE0020AC1E /* AddNewItemViewController.h */,
+				B23BEAB421F7CBCE0020AC1E /* AddNewItemViewController.m */,
 				B23BEAB021F7AA8C0020AC1E /* DetailedViewController.h */,
 				B23BEAB121F7AA8C0020AC1E /* DetailedViewController.m */,
 				B23BEA8421F79C840020AC1E /* Assets.xcassets */,
@@ -272,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23BEAB521F7CBCE0020AC1E /* AddNewItemViewController.m in Sources */,
 				B23BEA8021F79C830020AC1E /* ViewController.m in Sources */,
 				B23BEA8B21F79C840020AC1E /* main.m in Sources */,
 				B23BEA7D21F79C830020AC1E /* AppDelegate.m in Sources */,

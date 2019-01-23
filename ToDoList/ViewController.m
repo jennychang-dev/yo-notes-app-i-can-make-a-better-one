@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ToDoItem.h"
-#import "DetailedViewController.h"
+
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -19,6 +18,8 @@
 
 @implementation ViewController
 
+- (IBAction)swipeToCompleteTask:(UISwipeGestureRecognizer *)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,8 +51,17 @@
 // passing in the sender to show more details
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    // set myself as the delegate if the seguepath is addViewController
+    
+    if ([[segue identifier] isEqualToString:@"SegueToAdd"]) {
+        AddNewItemViewController *aVC = segue.destinationViewController;
+        aVC.delegate = self;
+
+    } else {
+    
     DetailedViewController *dVC = segue.destinationViewController;
     
+        
     if ([sender isKindOfClass:[NSIndexPath class]]) {
         
         NSIndexPath *indexPath = (NSIndexPath *)sender;
@@ -60,6 +70,8 @@
         dVC.name = item.activity;
         dVC.date = item.completeDate;
         dVC.level = item.priorityLevel;
+    }
+        
     }
 }
 
@@ -88,6 +100,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
     return 1; // if I don't want sections, just make this one
+}
+
+-(void)addNewTodo:(ToDoItem *)item
+{
+    NSLog(@"adding new item to the array");
+    [self.toDos addObject:item];
+    [self.toDoTableView reloadData];
     
 }
 

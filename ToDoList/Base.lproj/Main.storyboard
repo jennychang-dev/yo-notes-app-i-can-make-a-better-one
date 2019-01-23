@@ -29,6 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -45,7 +46,7 @@
                     <navigationItem key="navigationItem" id="kNd-m0-802">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WlS-4a-z9c">
                             <connections>
-                                <segue destination="2BP-tl-zXH" kind="show" id="cJG-jN-9bZ"/>
+                                <segue destination="2BP-tl-zXH" kind="show" identifier="SegueToAdd" id="cJG-jN-9bZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -58,17 +59,63 @@
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--Add New Item View Controller-->
         <scene sceneID="CJi-By-dpr">
             <objects>
-                <viewController id="2BP-tl-zXH" sceneMemberID="viewController">
+                <viewController id="2BP-tl-zXH" customClass="AddNewItemViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6m9-4s-YCc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DD/MM/YYYY" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lU0-ce-8eU" userLabel="Add Deadline">
+                                <rect key="frame" x="8" y="252" width="359" height="30"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activity Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrW-S1-zzb">
+                                <rect key="frame" x="8" y="152" width="359" height="30"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Priority Level (1 - 5)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmc-f4-t5S">
+                                <rect key="frame" x="8" y="352" width="359" height="30"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21644545992193931" green="0.53041586469971935" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rrW-S1-zzb" firstAttribute="leading" secondItem="dnN-A8-onK" secondAttribute="leading" constant="8" id="Apy-gk-yho"/>
+                            <constraint firstItem="dnN-A8-onK" firstAttribute="trailing" secondItem="rrW-S1-zzb" secondAttribute="trailing" constant="8" id="CvN-Gz-zI9"/>
+                            <constraint firstItem="dnN-A8-onK" firstAttribute="trailing" secondItem="lU0-ce-8eU" secondAttribute="trailing" constant="8" id="D0n-lR-hWJ"/>
+                            <constraint firstItem="pmc-f4-t5S" firstAttribute="leading" secondItem="dnN-A8-onK" secondAttribute="leading" constant="8" id="IKE-9u-e4w"/>
+                            <constraint firstItem="dnN-A8-onK" firstAttribute="trailing" secondItem="pmc-f4-t5S" secondAttribute="trailing" constant="8" id="LIR-Fs-9U2"/>
+                            <constraint firstItem="lU0-ce-8eU" firstAttribute="centerY" secondItem="6m9-4s-YCc" secondAttribute="centerY" multiplier="0.8" id="eX5-4j-ZFu"/>
+                            <constraint firstItem="pmc-f4-t5S" firstAttribute="centerY" secondItem="6m9-4s-YCc" secondAttribute="centerY" multiplier="1.1" id="giz-N9-778"/>
+                            <constraint firstItem="rrW-S1-zzb" firstAttribute="centerY" secondItem="6m9-4s-YCc" secondAttribute="centerY" multiplier="0.5" id="hJW-Ng-Jf5"/>
+                            <constraint firstItem="lU0-ce-8eU" firstAttribute="leading" secondItem="dnN-A8-onK" secondAttribute="leading" constant="8" id="tec-GF-wTh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dnN-A8-onK"/>
+                    </view>
                     <navigationItem key="navigationItem" id="qKB-v4-FdV">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Zgn-3H-dK6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Zgn-3H-dK6">
+                            <connections>
+                                <action selector="saveChanges:" destination="2BP-tl-zXH" id="nEu-44-28v"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addActivityName" destination="rrW-S1-zzb" id="qnQ-VF-HVH"/>
+                        <outlet property="addDeadline" destination="lU0-ce-8eU" id="9D5-aP-rNV"/>
+                        <outlet property="addPriorityLevel" destination="pmc-f4-t5S" id="26B-P1-Qfe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBg-ZV-5cf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159" y="-785"/>
+            <point key="canvasLocation" x="1157.5999999999999" y="-785.75712143928047"/>
         </scene>
         <!--Detailed View Controller-->
         <scene sceneID="INx-oH-Pdc">

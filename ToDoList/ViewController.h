@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ToDoItem.h"
+#import "AddNewItemViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AddNewItemDelegate>
 
+-(void)addNewTodo:(ToDoItem *)item;
 
 @end
 
